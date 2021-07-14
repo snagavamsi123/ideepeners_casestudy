@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<form method='POST' action=''>
+            {% csrf_token %}
+
+            <div class='signup_head'>
+                <h4 style="color:rgb(136, 136, 136);">{{message}}</h4>
+                <h1>Executive Login</h1>
+            </div>
+
+
+            <div class='signupdiv'>
+                <table>
+                    {{ form.as_table }}
+                </table>
+            </div>
+            <div class= 'login_submit_btn'>
+                
+                <input type="submit">
+            </div>
+
+            <div class ='login_note'>
+                <h3>Enter Mobile number with Country Code (Like : +91XXXXXXXXXX)</h3>
+            </div>
+
+        </form>
+
+
+
+
+
+
+{%  endblock %}

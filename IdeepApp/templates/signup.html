@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<form method='POST' action=''>
+            {% csrf_token %}
+
+            <div class='signup_head'> 
+                {% if submitted %}
+                <h4 style="color:rgb(195, 0, 255);">Submitted Succcessfully</h4>
+                {% else%}
+                {% endif %}
+                <h1>Executive Signup</h1>
+            </div>
+            
+            <div class='signupdiv'>
+  
+                <table>
+                    {% for field in form %}
+                                    <tr><th>{{field.label_tag }}</th><td>{{field}}</td></tr>
+                    {% endfor %}
+                </table>
+
+                <div class='errors'>
+                    {% for error,error_message in form.errors.items %}
+                        <h3 class='error'>{{ error_message }}</h3>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+
+
+            
+            <!-- div class='signupdiv'>
+                <table>
+                    {{ form.as_table }}
+                </table>
+            </div -->
+            <div class= 'submit_btn'>
+                
+                <input type="submit">
+                
+            </div>
+        </form>
+
+{%  endblock %}

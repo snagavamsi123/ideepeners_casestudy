@@ -1,0 +1,28 @@
+{% extends 'exe_forms_base.html' %}
+
+
+{% block content %}
+
+
+
+<form method='POST'>
+    {% csrf_token %}
+
+    <div class='signup_head'>
+        <h1>Daily Update</h1>
+    </div>
+
+    <div class='signupdiv'>
+        <table>
+            {{ form.as_table }}
+        </table>
+    </div>
+    <div class= 'submit_btn'>
+        
+        <input type="submit">
+        
+    </div>
+</form>
+
+
+{% endblock %}

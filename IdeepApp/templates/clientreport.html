@@ -1,0 +1,38 @@
+{% extends 'exe_forms_base.html' %}
+{% block content %}
+
+
+<div class="" align='center'>
+    <br><br><br><br><br><br>
+    <h1  class=''>Daily Report</h1>
+    <table border="1" class='report_table'>
+        <tr class='report_table_heading' bgcolor='sky blue' align="center">
+            <td>Name</td>
+            <td>DateOfBirth</td>
+            <td>Age</td>
+            <td>Gender</td>
+            <td>FamilySize</td>
+            
+        </tr>
+        {% for result in values %}
+            <tr align="center" style="color: turquoise;">
+                <td>{{result.Name}}</td>
+                <td>{{result.DateOfBirth}}</td>
+                <td>{{result.Age}}</td>
+                <td>{{result.Gender}}</td>
+                <td>{{result.FamilySize}}</td>
+
+                
+            </tr>
+        {%endfor%}
+
+    </table>
+
+</div>
+
+
+
+
+
+
+{% endblock %}

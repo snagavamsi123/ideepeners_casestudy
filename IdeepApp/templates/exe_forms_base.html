@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+    <title>Home</title>
+</head>
+<body class='exe_index_body'>
+    <h2 align=left class='activity-title'>Activity-1</h2>
+    <header align='left' class='client_header_btns'>
+        <div class='header_div'></div>
+            <form action='{%url "dailyupdate" %}'>
+                <button class='btn'>Daily Status</button>
+            </form>
+            <form action='{%url "clientdetails" %}'>
+                <button class='btn'>Client details</button>
+            </form>
+
+            <form action='{%url "dailyreport" %}'>
+                <button class='btn'>Daily Report</button>
+            </form>
+            <form action='{%url "clientreport" %}'>
+                <button class='btn'>Client Report</button>
+            </form>
+
+            <form action='{%url "home" %}'>
+                <button class='btn'>Log Out</button>
+            </form>
+
+
+        </div>
+    </header>
+
+
+        {% block content %}
+        
+        {% endblock %}
+            
+</body>
+</html>

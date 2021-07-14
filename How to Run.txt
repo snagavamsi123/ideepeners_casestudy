@@ -1,0 +1,6 @@
+1.Open command prompt in this location
+2.Install requirements using the command (pip -r requirements.txt)
+3.Then enter the command 'python manage.py runserver'
+4.Open Browser and Enter Url 'localhost:8000/home/'
+
+HomePage Url  :   localhost:8000/home/
